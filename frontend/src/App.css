@@ -1,0 +1,497 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* @import 'node_modules/modern-normalize/modern-normalize.css';   */
+  /* npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize   */
+  /* @import "component1.css";   Component-specific stylesheets, if any.   */
+  @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;700;900&family=Sansita+Swashed:wght@300..900&display=swap');
+  @import "~react-image-gallery/styles/css/image-gallery.css";
+
+
+/*   ----- Variables  -----  */
+:root {
+    --darkForest: rgb(33, 61, 55);
+    --leaf: rgb(92, 125, 56);
+    --grayMist: rgb(242, 242, 242);
+    --darkPeriwinkle: rgb(87, 93, 158);
+    --warmBrown: rgb(92, 39, 35);
+    --grayMistT: rgba(242, 242, 242, 0.92);
+    --darkPeriwinkleT: rgba(87, 93, 158, 0.5);
+    --darkPeriwinkleT2: rgba(87, 93, 158, 0.15);
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {}. */
+    background-image: url(images/background-oregon-river.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top left;
+    background-repeat: no-repeat;
+    color: var(--darkForest);
+    font-family: "Alegreya Sans", sans-serif;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1000px;
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header {
+    background-color: var(--grayMistT);
+    text-align: center;
+    padding: 15px 0;
+    border-top: 3px solid var(--warmBrown);
+    border-bottom: 3px solid var(--leaf);
+  }
+  header img {
+    width: 45px; 
+    padding: 0 0 0 10px; 
+    vertical-align: middle;
+  }
+  main {
+    background-color: var(--darkPeriwinkleT);
+    padding: 0 15px;
+  }
+  section {
+    background-color: var(--grayMistT);
+    padding: 25px 40px 10px 40px;
+    border: 3px solid var(--leaf);
+    margin: 0 5px;
+  }
+  article {
+    margin-bottom: 10px;
+    font-size: 1.15em;
+    line-height: 1.5em;
+    border-top: 2px dotted var(--warmBrown);
+    padding: 0 15px 15px 15px;
+  }
+    #topic1 {}
+    #topic2 {}
+  div {}
+  aside {
+    float: right;
+    width: 200px;
+    height: fit-content;
+    border: 2px solid var(--leaf);
+    margin: 20px;
+    padding: 0 20px 20px 20px;
+  }
+
+  footer {
+    background-color: var(--darkPeriwinkleT);
+    color: var(--warmBrown);
+    padding: 15px 45px 45px 20px;
+    text-align: right;
+    text-shadow: 0 0 11px var(--grayMist);
+    vertical-align: middle;
+    font-family: "Sansita Swashed", system-ui;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-bottom: 3px solid var(--warmBrown);
+  }
+  
+  /* ----- Anchors ----- Text links */
+  a {}
+  a:active {scale: 95%}
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  nav a {
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /*  -----  Typography  ----- */
+  p {
+    margin: 0;
+    margin-top: 15px;
+  }
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {}
+  dd {}
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Sansita Swashed", system-ui;
+    color: var(--darkPeriwinkle);
+  } 
+  h1 {color: var(--darkForest)}
+  h2 {}
+  h3 {}
+  h4 {}
+  h5 {}
+  h6 {}
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {
+    font-family: "Alegreya Sans", sans-serif;
+    font-size: 1.05em;
+    padding: 0 3px;
+  }
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+  table {
+    margin: 3% auto 7% auto;
+    border-collapse: collapse;
+    border-bottom: 2px solid var(--warmBrown);
+    text-align: left;
+    width: 100%;
+  }
+  table img {
+    width: 60px;
+    border: 2px solid var(--leaf);
+  }
+  caption {
+    margin: 10px 10px 20px 10px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+    color: var(--darkPeriwinkle);
+  }
+  thead tr {
+    border-bottom: none;
+  }
+  tbody {
+    border-top: 2px solid var(--warmBrown);
+    border-bottom: 2px solid var(--warmBrown);
+    font-size: 1.2em;
+  }
+  tfoot {}
+  tr {border-bottom: 1px dashed var(--warmBrown);}
+   tbody tr:nth-child(odd) {background-color: var(--grayMistT);}
+  tr th {padding: 0 10px;}
+  tr td {
+    padding: 10px;
+    vertical-align: middle;
+    text-wrap: balance;
+  }
+    td:nth-child(1) {}
+  colgroup {}
+  data {}
+  datalist {}
+  
+  
+  /*  ----- Form ----- */
+  form {
+    font-family: inherit;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 20px 0;
+    justify-content: center
+  }
+  form p {font-size: .97em;}
+  fieldset {
+    display: grid;
+    border: 3px solid var(--warmBrown);
+    margin: 0 auto 25px auto;
+    padding: 0 25px 25px 25px;
+    width: auto;
+  }
+    legend {
+      font-family: "Sansita Swashed", system-ui;
+      color: var(--warmBrown);
+      font-size: 1.1em;
+      padding: 0 4px;
+    }
+  label {
+    display: flex;
+    align-items: baseline;
+    font-size: .97em;
+    text-wrap: balance;
+  }
+  label.multiple {font-size: 1.1em; margin-top: 3px;}
+  input, select, textarea {
+    color: var(--darkPeriwinkle);
+    background-color: var(--grayMistT);
+    margin: 0 10px;
+    padding: 10px;
+    font-size: 1.3em;
+    font-family: inherit;
+    width: auto;
+  }
+  input:focus, textarea:focus {
+    background-color: var(--darkPeriwinkleT2);
+    color: var(--darkForest);
+    border: 3px solid var(--leaf);
+  }
+  button {
+    font-family: "Sansita Swashed", system-ui;
+    background-color: var(--warmBrown);
+    color: var(--grayMist);
+    margin: 30px 10px 20px 10px;
+    justify-self: right;
+    align-self: end;
+    padding: 10px;
+    width: 110px;
+    border: 3px solid var(--warmBrown);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  button:active {scale: 95%; border: 3px solid var(--leaf);}
+  button:hover, button:focus-visible {
+    background-color: var(--grayMistT);
+    color: var(--darkForest);
+    border: 3px solid var(--warmBrown);
+    font-weight: lighter;
+  }
+  input[type=text], input[type=email], textarea, select {width: 80%;}
+  input[type=number] {width: 40%;}
+    optgroup {}
+    option {} 
+  textarea {height: 175px;}
+
+  output {}
+  meter {}
+  progress {}
+  *::placeholder {color: var(--darkPeriwinkleT);}
+  fieldset:has(table) {width: auto;}
+  input:invalid, textarea:invalid {
+    border: 3px solid var(--warmBrown);
+    color: var(--warmBrown);
+  }
+  input:valid, textarea:valid {border: 3px solid var(--leaf);}
+  label:has(input[type="checkbox"]:checked), label:has(input[type=radio]:checked), tr:has(input[type=radio]:checked) {
+    color: var(--darkPeriwinkle);
+    font-style: italic;
+  }
+
+  /* ----- Media ----- */
+  figure {}
+    figcaption {}
+    figure img {}
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  :fullscreen {background-color: var(--grayMistT);}
+  .center {text-align: center;}
+  .external:link {color: var(--darkPeriwinkle);}
+  .external:visited {color: var(--leaf);}
+  .external:hover, .external:focus-visible {
+    background-color: transparent;
+    color: var(--warmBrown);
+    border: none;
+    font-weight: normal;
+  }
+  .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 15px 0;
+  }
+  /* .gallery figure {
+    margin: 15px auto;
+    width: 375px;
+    height: max-content;
+    border: 3px solid var(--warmBrown);
+  } */
+  /* .gallery figcaption {
+    display: block;
+    padding: 0 15px 10px 15px;
+    font-size: 0.85em;
+    line-height: 1.2em;
+  } */
+  /* .gallery img {
+      width: 100%;
+  } */
+  .global {
+    background-color:var(--darkPeriwinkleT);
+    font-family: "Sansita Swashed", system-ui;
+    margin: 0;
+    padding: 15px 15px 0;
+  }
+  .global a:active {border: 3px solid var(--darkForest);}  
+  .global a {
+    background-color: var(--warmBrown);
+    color: var(--grayMist);
+    margin: 2px 1px 0;
+    padding: 10px;
+    width: 80px;
+    border: 3px solid var(--warmBrown);
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    font-size: 1.2em;
+  }
+  .global a:hover, .global a:focus-visible {
+    background-color: var(--grayMistT);
+    color: var(--darkForest);
+    height: 50%;
+    border: 3px solid var(--warmBrown);
+    font-weight: lighter;
+  }
+  .icon-larger {font-size: 150%;}
+  .icon-smaller {font-size: 75%;}
+  .image-gallery-content.fullscreen {
+    background: transparent;
+    margin-bottom: 2%;
+    margin-top: 2%;
+  }
+  .image-gallery-fullscreen-button, .image-gallery-play-button {
+    bottom: unset;
+    margin: 0;
+  }
+  .image-gallery-icon:hover, .image-gallery-icon:focus-visible {
+    background-color: transparent;
+    border: none;
+    color: var(--darkPeriwinkle);
+  }
+  .image-gallery-slide .image-gallery-description {
+    font-family: inherit;
+    font-size: .85em;
+    color: var(--grayMist);
+    text-shadow: 0 0 11px var(--darkForest);
+    background-color: rgb(33, 61, 55, .5);
+    bottom: 0px;
+  }
+  .image-gallery-thumbnail:hover, .image-gallery-thumbnail:focus-visible, .image-gallery-thumbnail.active {
+    border: 4px solid var(--darkPeriwinkle)!important;
+  }
+  .intro {font-size: 1.15em; margin: 30px 0;}
+  .local {
+    font-family: "Alegreya Sans", sans-serif;
+    font-size: 1.05em;
+    background-color: transparent;
+    padding: 0;
+    margin: 30px 0 5px 0;
+    flex-wrap: wrap;
+  }
+  .local a {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    color: var(--warmBrown);
+    font-size: 1.2em;
+    padding: 0 5px;
+    margin: 5px 2% 7px 2%;
+    width: initial;
+  }
+  .local a:hover, .local a:focus-visible {
+    background-color: transparent;
+    color: var(--warmBrown);
+    text-decoration: overline 1px var(--leaf);
+    border: none;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .required::before {
+    content: "*";
+    font-size: 1.3em;
+    font-weight: 900;
+    color: var(--warmBrown);
+  }
+  .side-padding {
+    display: inline-block;
+    width: 30px;
+  }
+  .staff caption {
+    font-size: 1.2em;
+    border-top: 2px dotted var(--warmBrown);
+    padding: 30px 10px 15px;
+  }
+  .numbers {text-align: right;}
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+
+  @keyframes App-logo {}
+   
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+
+  @media (max-width: 500px) {
+    aside {width: fit-content;}
+    nav {flex-direction: column;}
+    nav a, .global a, .local a {margin: 1px auto;}
+    .global a {border-radius: 7px;}
+    section {padding: 25px 20px;}
+    article {padding: 0 5px;}
+    fieldset {padding: 0 15px 25px 15px;}   
+    input[type=text], input[type=email], textarea {width: 180px;}
+    select {width: 200px;}
+  }
+
+  @media (max-width: 785px) {
+    table {display: flex; flex-direction: column;}
+    caption {text-align: center;}
+    tr {
+      display: flex; 
+      flex-direction: column; 
+      align-items: center;
+      text-align: center;
+      padding: 5px 0;
+    }
+    tr td {
+      display: grid;
+      padding: 2px 0;
+    }
+    td label {
+      display: inline-block;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 350px) {
+    section {padding: 5px;}
+    input[type=text], input[type=email], textarea {width: 110px;}
+    select {width: 130px;}
+  }
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
+  

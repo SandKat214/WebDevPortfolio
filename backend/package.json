@@ -1,0 +1,20 @@
+{
+  "name": "art-collection-starter-backend",
+  "version": "2023",
+  "description": "Model-Controller backend for art collection database CRUD operations.",
+  "main": "arts-controller.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon arts-controller.mjs"
+  },
+  "author": "Katherine Sandeen",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1",
+    "nodemon": "^3.0.1",
+    "rest": "^2.0.0"
+  }
+}

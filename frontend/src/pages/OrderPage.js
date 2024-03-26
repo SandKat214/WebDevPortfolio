@@ -15,7 +15,7 @@ function OrderPage() {
                     Select your desired item and enter how many you would like (up to 10 each)...
                 </p>
                 <table>
-                    <caption>Available Inventory</caption>
+                    <caption>Available Inventory:</caption>
                     
                     <thead>
                         <tr>

@@ -11,7 +11,7 @@ const app = express();
 
 // Middleware
 const corsOptions = {
-    origin: "https://sandeenk-webdev-portfolio.onrender.com"
+    origin: "https://sandeenk-webdev-portfolio.onrender.com/"
 }
 app.use(express.json());  // REST needs JSON MIME type.
 app.use(cors(corsOptions));

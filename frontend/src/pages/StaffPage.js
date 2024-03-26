@@ -32,7 +32,7 @@ function StaffPage() {
 
                 <button id="getStaff" onClick={loadStaff}>Get Staff</button>
 
-                <table className="staff">
+                <table>
                     <caption>Staff Information:</caption>
 
                     <thead>

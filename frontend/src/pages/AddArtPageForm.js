@@ -21,7 +21,8 @@ export const AddArtPageForm = () => {
 
     const redirect = useNavigate(); 
 
-    const addArtItem = async () => {
+    const addArtItem = async (event) => {
+        event.preventDefault();
         const newArtItem = { 
             title: title, 
             artist: artist, 
@@ -54,7 +55,7 @@ export const AddArtPageForm = () => {
             <h2>Add an art piece</h2>
             <p>Use this form to add a new piece of art to the collection.</p>
             <p className="required"> Required Fields</p>
-            <form onSubmit={(e) => { e.preventDefault(); }}>
+            <form onSubmit={(e) => addArtItem(e)}>
                 <fieldset>
                     <legend>Which art piece are you adding?</legend>
                     <label htmlFor="title" className='required'>
@@ -149,7 +150,6 @@ export const AddArtPageForm = () => {
                     <label htmlFor="submit">
                         <button
                             type="submit"
-                            onClick={addArtItem}
                             id="submit"
                         >Add</button>
                     </label>

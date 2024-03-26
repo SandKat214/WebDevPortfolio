@@ -420,11 +420,6 @@
     display: inline-block;
     width: 30px;
   }
-  .staff caption {
-    font-size: 1.2em;
-    border-top: 2px dotted var(--warmBrown);
-    padding: 30px 10px 15px;
-  }
   .numbers {text-align: right;}
   .floatright {}
   .floatleft {}

@@ -23,7 +23,8 @@ export const EditArtPageForm = ({ artItemToEdit }) => {
 
     const redirect = useNavigate();
 
-    const editArtItem = async () => {
+    const editArtItem = async (event) => {
+        event.preventDefault();
         const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/artItems/${artItemToEdit._id}`, {
             method: 'PUT',
             body: JSON.stringify({ 
@@ -52,7 +53,7 @@ export const EditArtPageForm = ({ artItemToEdit }) => {
         <article>
             <h2>Edit an art piece</h2>
             <p>Use this form to edit a piece of art that already exists in the collection.</p>
-            <form onSubmit={(e) => { e.preventDefault();}}>
+            <form onSubmit={(e) => editArtItem(e)}>
                 <fieldset>
                     <legend>Which art piece are you editing?</legend>
                     <label htmlFor="title" className='required'>
@@ -93,7 +94,7 @@ export const EditArtPageForm = ({ artItemToEdit }) => {
                         <option value="Mixed Media">Mixed Media</option>
                     </select>
 
-                    <label htmlFor="width">Width in Inches</label>
+                    <label htmlFor="width" className='required'>Width in Inches</label>
                     <input
                         type="number"
                         min='0'
@@ -101,9 +102,10 @@ export const EditArtPageForm = ({ artItemToEdit }) => {
                         value={width}
                         placeholder="Inches Width"
                         onChange={e => setWidth(e.target.value)} 
-                        id="width" />
+                        id="width"
+                        required />
 
-                    <label htmlFor="height">Height in Inches</label>
+                    <label htmlFor="height" className='required'>Height in Inches</label>
                     <input
                         type="number"
                         min='0'
@@ -111,16 +113,18 @@ export const EditArtPageForm = ({ artItemToEdit }) => {
                         value={height}
                         placeholder="Inches Height"
                         onChange={e => setHeight(e.target.value)} 
-                        id="height" />
+                        id="height"
+                        required />
                     
-                    <label htmlFor="created">Creation Year</label>
+                    <label htmlFor="created" className='required'>Creation Year</label>
                     <input
                         type="number"
                         min="1"
                         max={currentYear}
                         value={created}
                         onChange={e => setCreated(e.target.value)} 
-                        id="created" />
+                        id="created"
+                        required />
 
                     <label htmlFor="acquired" className='required'>Date of Acquisition</label>
                     <input
@@ -134,7 +138,7 @@ export const EditArtPageForm = ({ artItemToEdit }) => {
 
                     <label htmlFor="submit">
                     <button
-                        onClick={editArtItem}
+                        type="submit"
                         id="submit"
                     >Save</button></label>
                 </fieldset>

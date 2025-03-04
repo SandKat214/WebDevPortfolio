@@ -1,7 +1,40 @@
 # Web Development Portfolio Project
 
-This single page application is my first web page and is the culmination of the information learned in my web development class at OSU. 
+This project is a full-stack web application developed as part of my web development course at Oregon State University. It demonstrates the knowledge and skills I gained in web development, including working with JavaScript, React, Node.js, Express, and MongoDB.
 
-The functionality of the app is decomposed into a Model-View-Controller pattern. Node.js is the runtime environment for JavaScript on the front and back ends. MongoDB is the database management system chosen to handle the art collection of the app. Mongoose is utilized in the model layer to connect and manipulate the contents of the MongoDB database collection. Express.js, on the controller layer, implements the route handlers which relay requests from the view layer and dictates how the model will be updated in response to those requests. The program utilizes a RESTful API backend so that each HTTP request can happen in isolation, and all the information needed to process the request is sent within the request itself. React is used to create the frontend, or view layer, GUI which can be viewed and interacted with by the user to request creation, reading, updating, and deletion (CRUD) operations on the backend.  The results are a full stack MERN application.
+## Project Overview
 
-The frontend and backend have been deployed via [Render](https://render.com/), and the frontend can be viewed/interacted with via this link: [https://sandeenk-webdev-portfolio.onrender.com/](https://sandeenk-webdev-portfolio.onrender.com/)
+This single-page application follows the Model-View-Controller (MVC) architecture pattern. It allows users to interact with an art collection, supporting CRUD (Create, Read, Update, Delete) operations on the backend, while providing a user-friendly interface on the frontend.
+
+### Key Technologies Used:
+- **Backend**: Node.js, Express.js, MongoDB, Mongoose
+- **Frontend**: React.js, HTML, CSS
+- **Database**: MongoDB (using Mongoose ORM)
+- **Deployment**: Render
+
+### Features:
+- View, create, edit, and delete art pieces.
+- Manage orders and staff.
+- Fully functional user interface with responsive design.
+
+---
+
+## Project Structure
+
+### Backend
+- **arts-controller.mjs**: Contains the controller logic for handling requests related to arts.
+- **arts-model.mjs**: Mongoose model to represent art data in MongoDB.
+- **package.json** & **package-lock.json**: Dependencies and package management for the backend.
+
+### Frontend
+- **src**: Source files for React components, pages, and data.
+  - **components**: React components for various parts of the app.
+  - **data**: JavaScript data files for managing product-related data.
+  - **pages**: React pages for different sections of the app.
+  - **App.js**: The root component that ties everything together.
+  - **App.css**: Global styling for the app.
+  - **index.js**: The entry point for the React app.
+
+### Deployment
+- **Frontend**: Hosted on Render, accessible at [https://sandeenk-webdev-portfolio.onrender.com](https://sandeenk-webdev-portfolio.onrender.com).
+- **Backend**: Also deployed on Render, providing the RESTful API for handling art data.
